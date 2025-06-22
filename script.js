@@ -52,14 +52,34 @@ document.addEventListener('DOMContentLoaded', () => {
   let charIndex = 0;
   let isDeleting = false;
 
+  // Helper to wrap first and last word in spans
+  function highlightWords(text) {
+    const words = text.split(' ');
+    if (words.length === 1) {
+      return `<span class="highlight-start">${words[0]}</span>`;
+    }
+    return `<span class="highlight-start">${words[0]}</span> ` +
+      words.slice(1, -1).join(' ') +
+      (words.length > 2 ? ' ' : '') +
+      `<span class="highlight-end">${words[words.length - 1]}</span>`;
+  }
+
   function type() {
     const currentPhrase = phrases[phraseIndex];
+    let displayText;
     if (isDeleting) {
-      typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+      displayText = currentPhrase.substring(0, charIndex - 1);
       charIndex--;
     } else {
-      typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+      displayText = currentPhrase.substring(0, charIndex + 1);
       charIndex++;
+    }
+
+    // Only highlight when the full phrase is shown
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      typingElement.innerHTML = highlightWords(currentPhrase);
+    } else {
+      typingElement.textContent = displayText;
     }
 
     if (!isDeleting && charIndex === currentPhrase.length) {
