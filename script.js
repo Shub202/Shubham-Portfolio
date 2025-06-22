@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const typingElement = document.getElementById('typing-text');
   const phrases = [
     "Hello, I'm Shubham Kumar.",
-    "A Web Developer.",
-    "A Lifelong Learner."
+    "A Frontend Developer.",
+    "A  Quick Learner."
   ];
   let phraseIndex = 0;
   let charIndex = 0;
