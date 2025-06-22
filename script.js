@@ -49,50 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "A  Quick Learner."
   ];
   let phraseIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
-  // Helper to wrap first and last word in spans
-  function highlightWords(text) {
-    const words = text.split(' ');
-    if (words.length === 1) {
-      return `<span class="highlight-start">${words[0]}</span>`;
-    }
-    return `<span class="highlight-start">${words[0]}</span> ` +
-      words.slice(1, -1).join(' ') +
-      (words.length > 2 ? ' ' : '') +
-      `<span class="highlight-end">${words[words.length - 1]}</span>`;
-  }
-
-  function type() {
-    const currentPhrase = phrases[phraseIndex];
-    let displayText;
-    if (isDeleting) {
-      displayText = currentPhrase.substring(0, charIndex - 1);
-      charIndex--;
-    } else {
-      displayText = currentPhrase.substring(0, charIndex + 1);
-      charIndex++;
-    }
-
-    // Only highlight when the full phrase is shown
-    if (!isDeleting && charIndex === currentPhrase.length) {
-      typingElement.innerHTML = highlightWords(currentPhrase);
-    } else {
-      typingElement.textContent = displayText;
-    }
-
-    if (!isDeleting && charIndex === currentPhrase.length) {
-      setTimeout(() => isDeleting = true, 2000);
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      phraseIndex = (phraseIndex + 1) % phrases.length;
-    }
-
-    const typeSpeed = isDeleting ? 75 : 150;
-    setTimeout(type, typeSpeed);
-  }
-  if (typingElement) type();
+  phraseIndex = animateTyping(phrases, phraseIndex, typingElement);
 
   // --- SCROLL-IN ANIMATIONS (USING INTERSECTION OBSERVER) ---
   const observerOptions = {
@@ -128,3 +85,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- FOOTER YEAR UPDATE ---
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 });
+function animateTyping(phrases, phraseIndex, typingElement) {
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    if (isDeleting) {
+      typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      setTimeout(() => isDeleting = true, 2000);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
+
+    const typeSpeed = isDeleting ? 75 : 150;
+    setTimeout(type, typeSpeed);
+  }
+  if (typingElement) type();
+  return phraseIndex;
+}
+

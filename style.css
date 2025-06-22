@@ -3,19 +3,19 @@
 /* ─── VARIABLES & THEME SETUP ────────────────────── */
 :root {
   --hue: 220;
-  --primary-light: #111111; /* Black for light mode buttons */
-  --bg-light: hsl(var(--hue), 40%, 98%);
-  --card-light: #ffffff;
-  --text-light: hsl(var(--hue), 20%, 25%);
-  --text-muted-light: hsl(var(--hue), 20%, 45%);
-  --border-light: hsl(var(--hue), 30%, 88%);
+  --primary-light: #360000; /* Black for light mode buttons */
+  --bg-light: #fffefe; /* Light background color */
+  --card-light: #f3d4d42c;
+  --text-light: rgba(0, 0, 0, 0.8); /* Dark text for light mode */
+  --text-muted-light: #000000; /* Muted text for light mode */
+  --border-light: #ffffff; /* Light border color */
 
-  --primary-dark: #ffffff; /* White for dark mode buttons */
-  --bg-dark: #111111; /* Changed to dark black */
-  --card-dark: #181818; /* Slightly lighter for cards */
+  --primary-dark: #f0cd2f; /* White for dark mode buttons */
+  --bg-dark: #000000; /* Changed to dark black */
+  --card-dark: #120c0c; /* Slightly lighter for cards */
   --text-dark: #f5f5f5;
   --text-muted-dark: #fafafa;
-  --border-dark: #222222;
+  --border-dark: #000000;
 
   --font-family: 'Inter', sans-serif;
   --transition: 0.3s ease;
@@ -103,7 +103,7 @@ body.dark-theme {
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: hsla(0, 0%, 100%, 0.7);
+  background-color: hsl(0, 0%, 100%);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-light);
 }
@@ -169,7 +169,7 @@ body.dark-theme .nav__link:hover {
 /* Button color overrides */
 .button {
   background-color: var(--primary-light) !important;
-  color: #bfa800 !important;
+  color: #e1d827 !important;
 }
 body.dark-theme .button {
   background-color: var(--primary-dark) !important;
