@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shubham Kumar | Web Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="container nav">
+      <button class="nav__toggle" id="nav-toggle" aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <button class="nav__close" id="nav-close" aria-label="Close navigation menu">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+          <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#certification" class="nav__link">Internships</a></li>
+          <li class="nav__item"><a href="#achievements" class="nav__link">Achievements</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+
+        </ul>
+      </div>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span id="typing-text" class="typing-text"></span>
+          </h1>
+          <p class="hero__subtitle">
+            Intern • Front-End Developer • DSA • Python • Java
+          </p>
+          <a href="Shubham.pdf" class="button" download="Shubham_Kumar_Resume.pdf">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <i class="fas fa-arrow-down"></i>
+      </a>
+    </section>
+
+    <div class="container">
+      <!-- ABOUT SECTION -->
+      <section id="about" class="section animated">
+        <h2 class="section__title">About Me</h2>
+        <div class="about__content">
+          <figure class="about__image">
+            <img src="profile.jpg" alt="Profile image of Shubham Kumar" />
+          </figure>
+          <p class="section__content">
+            I’m a detail-oriented web developer who loves turning creative ideas into
+            pixel-perfect, accessible experiences. With a foundation in HTML, CSS, and JavaScript,
+            I build responsive interfaces that feel intuitive on any device.
+          </p>
+        </div>
+      </section>
+
+      <!-- EDUCATION SECTION -->
+      <section id="education" class="section animated">
+        <h2 class="section__title">Education</h2>
+        <div class="timeline">
+          <div class="timeline__item">
+            <h3>B.Tech CSE (AI & ML)</h3>
+            <p>Asansol Engineering College, Asansol (MAKAUT)</p>
+            <span>2023 – 2027</span>
+          </div>
+          <div class="timeline__item">
+            <h3>12th Grade</h3>
+            <p>D.A.V PUBLIC SCHOOL, HAZARIBAGH, JHARKHAND</p>
+            <span>2023</span>
+          </div>
+          <div class="timeline__item">
+            <h3>10th Grade</h3>
+            <p>D.A.V PUBLIC SCHOOL, HAZARIBAGH, JHARKHAND</p>
+            <span>2021</span>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- SKILLS SECTION -->
+      <section id="skills" class="section animated">
+        <h2 class="section__title">Skills</h2>
+        <div class="skills__grid">
+          <div class="skill__card"><i class="fab fa-html5"></i><span>HTML</span></div>
+          <div class="skill__card"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+          <div class="skill__card"><i class="fab fa-js"></i><span>JavaScript</span></div>
+          <div class="skill__card"><i class="fas fa-mobile-alt"></i><span>Responsive Design</span></div>
+          <div class="skill__card"><i class="fab fa-git-alt"></i><span>Git & GitHub</span></div>
+          <div class="skill__card"><i class="fab fa-python"></i><span>Python</span></div>
+          <div class="skill__card"><i class="fab fa-java"></i><span>Java</span></div>
+          <div class="skill__card"><i class="fas fa-database"></i><span>DSA</span></div>
+        </div>
+      </section>
+
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="section animated">
+        <h2 class="section__title">Projects</h2>
+        <div class="card__grid">
+          <div class="card">
+            <h3 class="card__title">Personal Portfolio</h3>
+            <p>
+              Built with semantic HTML, modern CSS, and vanilla JS for a dynamic, responsive experience.
+            </p>
+            <div class="card__actions">
+              <a href="#" class="button--link" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/Shub202/portfolio" class="button--link" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Weather Webpage</h3>
+            <p>
+              A lightweight dashboard using the OpenWeather API with geolocation to provide real-time data.
+            </p>
+            <div class="card__actions">
+              <a href="#" class="button--link" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/Shub202/weather-now-repo" class="button--link" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    
+
+      <!-- INTERNSHIPS SECTION -->
+      <section id="certification" class="section animated">
+        <h2 class="section__title">Internships</h2>
+        <div class="card__grid">
+          <div class="card">
+            <h3 class="card__title">Web Development Intern</h3>
+            <p class="card__subtitle">ApexPlanet Software Pvt. Ltd. (AICTE)</p>
+            <div class="card__actions">
+              <a href="Certificate_of_Internship_APSPL251542.pdf" class="button--link" download>
+                <i class="fas fa-file-pdf"></i> Certificate
+              </a>
+              <a href="#" class="button--link" download>
+                <i class="fas fa-file-alt"></i> Offer Letter
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card__title">AI Foundations Intern</h3>
+            <p class="card__subtitle">Microsoft & Edunet Foundation</p>
+            <div class="card__actions">
+              <a href="Foundation_of_AI.pdf" class="button--link" download>
+                <i class="fas fa-file-pdf"></i> Certificate
+              </a>
+              <a href="#" class="button--link" download>
+                <i class="fas fa-file-alt"></i> Offer Letter
+              </a>
+            </div>
+          </div>
+            <div class="card">
+                <h3 class="card__title">Web Development Intern</h3>
+                <p class="card__subtitle">CodeChef College Chapter</p>
+                <div class="card__actions">
+                <a href="Certificate_of_Internship_CodeChef.pdf" class="button--link" download>
+                    <i class="fas fa-file-pdf"></i> Certificate
+                </a>
+                <a href="#" class="button--link" download>
+                    <i class="fas fa-file-alt"></i> Offer Letter
+                </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card__title">Web Development Intern</h3>
+                <p class="card__subtitle">CodeChef College Chapter</p>
+                <div class="card__actions">
+                <a href="Certificate_of_Internship_CodeChef.pdf" class="button--link" download>
+                    <i class="fas fa-file-pdf"></i> Certificate
+                </a>
+                <a href="#" class="button--link" download>
+                    <i class="fas fa-file-alt"></i> Offer Letter
+                </a>
+                </div>
+        </div>
+      </section>
+
+
+      <!-- ACHIEVEMENTS SECTION -->
+      <section id="achievements" class="section animated">
+        <h2 class="section__title">Achievements</h2>
+        <ul class="achievements__list">
+          <li><i class="fas fa-trophy"></i><span>Top 10 finalist - SIH 2024</span></li>
+          <li><i class="fas fa-hand-holding-heart"></i><span>Built an NGO website that raised ₹1 lakh in the first month</span></li>
+          <li><i class="fas fa-microphone-alt"></i><span>Speaker at “Web Tech 2025” campus meetup on accessibility</span></li>
+        </ul>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section animated">
+        <h2 class="section__title">Contact</h2>
+        <form id="contactForm" class="contact__form">
+          <div class="form__group">
+            <input id="name" type="text" placeholder=" " required />
+            <label for="name">Name</label>
+          </div>
+          <div class="form__group">
+            <input id="email" type="email" placeholder=" " required />
+            <label for="email">Email</label>
+          </div>
+          <div class="form__group">
+            <textarea id="message" rows="5" placeholder=" " required></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit" class="button">Send Message</button>
+          <p id="formMessage" class="form__message"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <p>&copy; <span id="currentYear"></span> Shubham Kumar. All Rights Reserved.</p>
+      <div class="social__icons">
+        <a href="https://github.com/Shub202" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/shubham-kumar-b21037295" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:your.email@example.com" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="tel:+910000000" aria-label="Phone">
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
